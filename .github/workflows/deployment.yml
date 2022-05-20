@@ -1,7 +1,11 @@
 name: Vercel webhook
 on: push
 jobs:
-  call-webhook:
-    uses: joelwmale/webhook-action@2.1.0
-    with: 
-      url: ${{ secrets.VERCEL_WEBHOOK }}
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Calling webhook
+      uses: fjogeleit/http-request-action@v1
+      with:
+        url: ${{ secrets.VERCEL_WEBHOOK }}
+        method: 'POST'
