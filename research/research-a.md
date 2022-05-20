@@ -1,6 +1,6 @@
 ---
-title: First Post
-category: post
+title: An amazing blog post
+category: research
 ---
 # Saepe ne iura
 
