@@ -1,0 +1,4 @@
+- name: Vercel webhook
+  uses: joelwmale/webhook-action@master
+  with:
+    url: ${{ secrets.VERCEL_WEBHOOK }}
