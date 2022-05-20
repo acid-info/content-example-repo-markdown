@@ -17,10 +17,6 @@ dum regna sceleri: meus obsidis felix undas adopertaque ortu.
 3. Limina quodcunque saepe cum bracchia patremque tale
 4. Credidit in auras murum
 
-Dis robora animi mutatur est oscula denique spatiosi intus qui quid conveniunt,
-munera erunt addit nova radiare. Quo pallam munus loco, dea summo ratis herculis
-patulos femina *cuius*. Parce quique! In voce nota fide quam calido ut vidit
-habes Cythno.
 
 ## Quod per
 
