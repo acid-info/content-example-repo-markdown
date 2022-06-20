@@ -1,6 +1,5 @@
 ---
-title: Research about topic B
-category: research
+title: research
 ---
 # Saepe ne iura
 Differt intrat purpura: habitandae sic! Aures Dulichiae, exspectatus felicia
