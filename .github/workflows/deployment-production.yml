@@ -8,9 +8,13 @@ jobs:
     steps:
       - name: Triggering deploy hook
         uses: fjogeleit/http-request-action@v1
+        id: vrequest
         with:
           url: ${{ secrets.VERCEL_WEBHOOK_PRODUCTION }}
           method: 'POST'
+      - name: show response
+        run: |
+          echo ${{steps.vrequest.outputs}}
       - run: sleep 60
       - name: vercel-preview-url
         uses: zentered/vercel-preview-url@v1.0.5
