@@ -13,7 +13,7 @@ jobs:
           method: 'POST'
       - run: sleep 60
       - name: vercel-preview-url
-        uses: zentered/vercel-preview-url@v1.0.0
+        uses: zentered/vercel-preview-url@v1.0.5
         id: vercel_preview_url
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
