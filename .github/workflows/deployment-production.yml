@@ -14,7 +14,7 @@ jobs:
           method: 'POST'
       - name: show response
         run: |
-          echo ${{steps.vrequest.outputs}}
+          echo ${{steps.vrequest.outputs.job.id}}
       - run: sleep 60
       - name: vercel-preview-url
         uses: zentered/vercel-preview-url@v1.0.5
