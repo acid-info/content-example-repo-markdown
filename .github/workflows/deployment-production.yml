@@ -1,28 +1,13 @@
 name: Vercel webhook
 on:
   push:
-    branches: [master]
+    branches: [ master ]
 jobs:
   deployment:
     runs-on: ubuntu-latest
     steps:
-      - name: Triggering deploy hook
-        uses: fjogeleit/http-request-action@v1
-        id: vrequest
+      - name: Triggering deploy hook on vercel
+        uses: fjogeleit/http-request-action@v1.9.2
         with:
           url: ${{ secrets.VERCEL_WEBHOOK_PRODUCTION }}
           method: 'POST'
-      - name: show response
-        run: |
-          echo ${{steps.vrequest.outputs.job.id}}
-      - run: sleep 60
-      - name: vercel-preview-url
-        uses: zentered/vercel-preview-url@v1.0.5
-        id: vercel_preview_url
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        with:
-          vercel_team_id: ${{ secrets.VERCEL_TEAM_ID }}
-          vercel_project_id: ${{ secrets.VERCEL_PROJECT_ID }}
-      - name: Get URL
-        run: echo "https://${{ steps.vercel_preview_url.outputs.preview_url }}"
